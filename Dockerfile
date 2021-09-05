@@ -1,5 +1,5 @@
 # first stage
-FROM python:3.8 AS builder
+FROM python:3.9
 
 COPY ./src/requirements.txt .
 
