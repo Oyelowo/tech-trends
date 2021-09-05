@@ -1,0 +1,5 @@
+resources:
+- ./sandbox
+- ./staging
+- ./production
+namePrefix: cluster-a-

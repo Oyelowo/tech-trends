@@ -1,0 +1,21 @@
+namespace:
+  name: staging
+ 
+service:
+  port: 7111
+  type: LoadBalancer
+
+image:
+  repository: nginx 
+  tag: 1.10.0
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: 45m
+    memory: 256Mi
+
+configmap:
+  data: "version: alpine"
