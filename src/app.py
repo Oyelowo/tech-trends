@@ -22,7 +22,7 @@ def get_post(post_id):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
-@app.route('/healthcheck')
+@app.route('/status/healthcheck')
 def healthcheck():
     response = app.response_class(
         response=json.dumps({"status":"OK-healthy"}),
