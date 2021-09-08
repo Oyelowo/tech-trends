@@ -5,7 +5,7 @@ metadata:
   labels:
     app: tech-trends
     tag: web
-  name: tech-trends-web
+  name: tech-trends
   namespace: test
 spec:
   replicas: 1 
