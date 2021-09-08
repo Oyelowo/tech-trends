@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tech-trends-service
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: tech-trends
+    tag: web
+spec:
+  selector:
+    app: tech-trends
+    tag: web
+  ports:
+  - protocol: TCP
+    port: {{.Values.service.port}}
+    targetPort: {{.Values.service.port}}
+  type: {{ .Values.service.type }}
+
+
+{{- /*
+ apiVersion: v1
+kind: Service
+metadata:
+  name: tech-trends-service
+spec:
+  selector:
+    app: tech-trends
+    tag: web
+  ports:
+  - protocol: TCP
+    port: 6111
+    targetPort: 5111
+  type: LoadBalancer
+ 
+*/ -}}
