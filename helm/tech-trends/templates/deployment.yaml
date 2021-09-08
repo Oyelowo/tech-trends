@@ -10,7 +10,7 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }} 
   selector:
-  # This connects the deployment to the replicaset/pods
+  # This connects the deployment to the replicaset/pods.
     matchLabels:
       app: tech-trends
       tag: web
