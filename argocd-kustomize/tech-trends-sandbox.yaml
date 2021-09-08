@@ -9,8 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    kustomize:
-      version: v3.5.4
-    path: kustomize/tech-trends/base
-    repoURL: https://github.com/Oyelowo/tech-trends 
+    path: kustomize/tech-trends
+    repoURL: https://github.com/Oyelowo/tech-trends
     targetRevision: HEAD

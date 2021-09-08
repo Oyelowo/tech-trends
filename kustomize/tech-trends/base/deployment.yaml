@@ -27,7 +27,7 @@ spec:
         tag: web
     spec:
       containers:
-      - image: oyelowo:tech-trends:latest
+      - image: oyelowo/tech-trends:latest
         imagePullPolicy: IfNotPresent
         name: tech-trends
         resources:
