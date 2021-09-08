@@ -7,7 +7,7 @@ service:
 
 image:
   repository: oyelowo/tech-trends
-  tag: v1.0.0
+  tag: latest
   pullPolicy: IfNotPresent
 
 replicaCount: 3
