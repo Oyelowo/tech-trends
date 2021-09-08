@@ -4,6 +4,7 @@ description: Place for tech trends
 keywords:
   - tech-trends
   - web-app
+version: 1.0.0
 maintainers:
   - name: Oyelowo Oyedayo
     email: oyelowo@github.com
