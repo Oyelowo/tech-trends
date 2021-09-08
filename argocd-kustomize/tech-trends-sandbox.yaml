@@ -11,6 +11,6 @@ spec:
   source:
     kustomize:
       version: v3.5.4
-    path: kustomize/tech-trends/sandbox
+    path: kustomize/tech-trends/base
     repoURL: https://github.com/Oyelowo/tech-trends 
     targetRevision: HEAD
