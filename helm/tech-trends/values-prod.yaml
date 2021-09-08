@@ -6,8 +6,8 @@ service:
   type: LoadBalancer
 
 image:
-  repository: tech-trends
-  tag: web
+  repository: oyelowo/tech-trends
+  tag: latest
   pullPolicy: IfNotPresent
 
 replicaCount: 3

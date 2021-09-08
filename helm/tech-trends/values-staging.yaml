@@ -6,8 +6,8 @@ service:
   type: LoadBalancer
 
 image:
-  repository: nginx 
-  tag: 1.10.0
+  repository: oyelowo/tech-trends
+  tag: v1.0.0
   pullPolicy: IfNotPresent
 
 replicaCount: 2
