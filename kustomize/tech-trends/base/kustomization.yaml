@@ -5,3 +5,7 @@ resources:
 - deployment.yaml
 - namespace.yaml
 - service.yaml
+images:
+- name: tech
+  newName: oyelowo/tech-trends
+  newTag: main-c658fd85c44382af6ce8995446ae225b4fab42dc
