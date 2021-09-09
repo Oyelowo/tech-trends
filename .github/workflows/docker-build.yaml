@@ -70,6 +70,9 @@ jobs:
       with:
         kustomize-version: "3.6.1"
 
+    - name: Create image name and tag4
+      run: echo ${{env.IMAGE_WITH_TAG}}
+
     - name: Update Kubernetes resources
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
