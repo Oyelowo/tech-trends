@@ -1,4 +1,6 @@
 resources:
-- ./../base
+- ../base
+patchesStrategicMerge:
+- ./deployment_.yaml
 namePrefix: production-
-namespace: production
+# namespace: production
