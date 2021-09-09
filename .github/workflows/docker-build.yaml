@@ -51,7 +51,7 @@ jobs:
           push: true
           # repository: ${{ secrets.DOCKER_USERNAME }}
           # tags: ${{ github.sha }}, latest
-          tags: $IMAGE_WITH_TAG
+          tags: ${{env.IMAGE_WITH_TAG}}
 
   deploy:
     name: Deploy
@@ -75,7 +75,7 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
        cd kustomize/base
-       kustomize edit set image tech=$IMAGE_WITH_TAG
+       kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
        cat kustomization.yaml
         
     - name: Commit files
