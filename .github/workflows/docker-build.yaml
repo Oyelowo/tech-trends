@@ -77,7 +77,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-       cd kustomize/base
+       cd kustomize/tech-trends/base
        kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
        cat kustomization.yaml
         
