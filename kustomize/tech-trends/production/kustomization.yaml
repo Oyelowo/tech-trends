@@ -2,4 +2,4 @@ resources:
 - ../base
 
 namePrefix: production-
-# namespace: production
+namespace: production

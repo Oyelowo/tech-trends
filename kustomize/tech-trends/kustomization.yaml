@@ -3,4 +3,3 @@ resources:
 - ./staging
 - ./production
 namePrefix: cluster-a-
-# namespace: staging

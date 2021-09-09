@@ -28,8 +28,8 @@ spec:
     spec:
       containers:
       - image: oyelowo/tech-trends:latest
-        imagePullPolicy: IfNotPresent
         name: tech-trends
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             cpu: 50m
