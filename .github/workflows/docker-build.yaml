@@ -61,19 +61,14 @@ jobs:
     - name: Setup Kustomize
       uses: imranismail/setup-kustomize@v1
       with:
-        kustomize-version: "3.6.1"
-
-    - name: Set up Kustomize
-      run: |
-        curl -sfLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
-        chmod u+x ./kustomize
+        kustomize-version: "3.8.7"
 
     - name: Update Kubernetes resources
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
        cd kustomize/tech-trends/base
-       ./kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
+       kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
        cat kustomization.yaml
         
     - name: Commit files
