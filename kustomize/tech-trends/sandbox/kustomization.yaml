@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - ../base
 namePrefix: sandbox-
-# namespace: sandbox
+namespace: sandbox
