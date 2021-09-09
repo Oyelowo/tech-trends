@@ -36,7 +36,7 @@ jobs:
           push: true
           # repository: ${{ secrets.DOCKER_USERNAME }}
           # tags: ${{ github.sha }}, latest
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tech-trends:$GITHUB_SHA
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tech-trends:${GITHUB_SHA::7}
 
   deploy:
     name: Deploy
