@@ -65,14 +65,15 @@ jobs:
 
     - name: Set up Kustomize
       run: |
-        curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+        curl -sfLo kustomize "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+        chmod u+x ./kustomize
 
     - name: Update Kubernetes resources
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
        cd kustomize/tech-trends/base
-       kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
+       ./kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
        cat kustomization.yaml
         
     - name: Commit files
