@@ -25,7 +25,7 @@ jobs:
         run: echo $IMAGE
 
       - name: Create image name and tag3
-        run: echo $IMAGE_WITH_TAG
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE:${GITHUB_REF#refs/heads/}-$GITHUB_SHA
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
