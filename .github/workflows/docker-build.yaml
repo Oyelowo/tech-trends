@@ -8,6 +8,7 @@ on:
 
 env:
   IMAGE: tech-trends
+  IMAGE_WITH_TAG: ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE:${GITHUB_REF#refs/heads/}-$GITHUB_SHA
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create image name and tag
-        run: echo "::set-env name=IMAGE_WITH_TAG::${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE:${GITHUB_REF#refs/heads/}-$GITHUB_SHA"
+        run: echo "$IMAGE_WITH_TAG"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -41,7 +42,7 @@ jobs:
           push: true
           # repository: ${{ secrets.DOCKER_USERNAME }}
           # tags: ${{ github.sha }}, latest
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_WITH_TAG
+          tags: $IMAGE_WITH_TAG
 
   deploy:
     name: Deploy
@@ -53,7 +54,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Create image name and tag
-      run: echo "::set-env name=IMAGE_WITH_TAG::${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE:${GITHUB_REF#refs/heads/}-$GITHUB_SHA"
+      run: echo "$IMAGE_WITH_TAG"
 
     - name: Setup Kustomize
       uses: imranismail/setup-kustomize@v1
@@ -65,7 +66,7 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
        cd kustomize/base
-       kustomize edit set image tech-trends=$DOCKER_USERNAME/$IMAGE_WITH_TAG
+       kustomize edit set image tech=$IMAGE_WITH_TAG
        cat kustomization.yaml
         
     - name: Commit files
