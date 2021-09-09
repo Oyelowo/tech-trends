@@ -25,10 +25,10 @@ jobs:
         run: echo $IMAGE
 
       - name: Create image name and tag3
-        run: echo "::set-env name=IMAGE:WITH_TAG::${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE:${GITHUB_REF#refs/heads/}-$GITHUB_SHA"
+        run: echo "IMAGE_WITH_TAG=${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE:${GITHUB_REF#refs/heads/}-$GITHUB_SHA" >> $GITHUB_ENV
       
       - name: Create image name and tag4
-        run: echo $IMAGE_WITH_TAG
+        run: echo ${{env.IMAGE_WITH_TAG}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
