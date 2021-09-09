@@ -34,9 +34,9 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          repository: ${{ secrets.DOCKER_USERNAME }}/tech-trends
-          tags: ${{ github.sha }}, latest
-          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/tech-trends:latest
+          # repository: ${{ secrets.DOCKER_USERNAME }}
+          # tags: ${{ github.sha }}, latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tech-trends:${{ github.sha }}, latest
 
   deploy:
     name: Deploy
