@@ -8,8 +8,7 @@ metadata:
     tag: web
 spec:
   selector:
-    app: tech-trends
-    tag: web
+    app: tech-trends-web
   ports:
   - protocol: TCP
     port: 80
