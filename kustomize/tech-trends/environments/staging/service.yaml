@@ -4,6 +4,13 @@ metadata:
   name: tech-trends-service
 spec:
   ports:
-  - protocol: TCP
+  - name: http
     port: 80
-    nodePort: 30012
+    protocol: TCP
+    targetPort: 3111
+    nodePort: 30040
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 3111
+    nodePort: 30041
