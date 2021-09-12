@@ -25,7 +25,7 @@ app.config['SECRET_KEY'] = 'your secret key'
 @app.route('/status/healthcheck')
 def healthcheck():
     response = app.response_class(
-        response=json.dumps({"status":"OK-healthyyyyy"}),
+        response=json.dumps({"status":"OK-healthy"}),
         status=200,
         mimetype='application/json'
     )
