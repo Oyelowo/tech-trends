@@ -14,7 +14,7 @@ namespace: dev
 
 replicas:
   - name: tech-trends-web
-    count: 3
+    count: 2
 
 
 
