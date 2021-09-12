@@ -31,13 +31,6 @@ spec:
            containerPort: 3111
            protocol: TCP
         imagePullPolicy: IfNotPresent
-        volumeMounts:
-        - name: web-volume
-          mountPath: /app
-      volumes:
-      - name: web-volume
-        hostPath:
-          path: /tech-trends/data 
         resources:
           requests:
             cpu: 50m
@@ -57,3 +50,10 @@ spec:
             port: 3111
           initialDelaySeconds: 30
           timeoutSeconds: 10
+        volumeMounts:
+        - name: web-volume
+          mountPath: /app
+      volumes:
+      - name: web-volume
+        hostPath:
+          path: /tech-trends/data 
