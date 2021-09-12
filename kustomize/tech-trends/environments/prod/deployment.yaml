@@ -16,3 +16,10 @@ spec:
           limits:
             cpu: 500m
             memory: "0.5G"
+        volumeMounts:
+        - name: web-volume-prod
+          mountPath: .
+      volumes:
+      - name: web-volume-prod
+        hostPath:
+          path: /tech-trends-prod/data

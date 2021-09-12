@@ -7,7 +7,8 @@ metadata:
   name: tech-trends-web
   namespace: default
 spec:
-  replicas: 1 
+  replicas: 1
+  revisionHistoryLimit: 2 
   selector:
   # This connects the deployment to the replicaset/pods
     matchLabels:
@@ -51,9 +52,9 @@ spec:
           initialDelaySeconds: 30
           timeoutSeconds: 10
         volumeMounts:
-        - name: web-volume
+        - name: web-volume-dev
           mountPath: .
       volumes:
-      - name: web-volume
+      - name: web-volume-dev
         hostPath:
-          path: /tech-trends/data 
+          path: /tech-trends-dev/data 
