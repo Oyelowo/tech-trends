@@ -24,13 +24,20 @@ spec:
         app: tech-trends
     spec:
       containers:
-      - image: oyelowo/tech-trends
-        name: tech-trends
+      - name: tech-trends
+        image: oyelowo/tech-trends
         ports:
          - name: http
            containerPort: 3111
            protocol: TCP
         imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: web-volume
+          mountPath: /app
+      volumes:
+      - name: web-volume
+        hostPath:
+          path: /tech-trends/data 
         resources:
           requests:
             cpu: 50m
