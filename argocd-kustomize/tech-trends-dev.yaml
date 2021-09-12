@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tech-trends-sandbox
+  name: tech-trends-development
   namespace: argocd
 spec:
   destination:
@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kustomize/tech-trends/sandbox
+    path: kustomize/tech-trends/environments/dev
     repoURL: https://github.com/Oyelowo/tech-trends
     targetRevision: HEAD

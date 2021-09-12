@@ -64,10 +64,14 @@ You can get the password by:
   password-
 
 
-### Launch All the the cluster
+### Launch All the the cluster as a single application
 `kubectl apply -f argocd-kustomize/tech-trends-all.yaml`
 
 You can also launch deploy them separately for different environments
 `kubectl apply -f argocd-kustomize/tech-trends-sandbox.yaml`
 `kubectl apply -f argocd-kustomize/tech-trends-staging.yaml`
 `kubectl apply -f argocd-kustomize/tech-trends-production.yaml`
+
+of simply by apply the argocd-kustomize folder:
+`kubectl apply -f argocd-kustomize/`
+
