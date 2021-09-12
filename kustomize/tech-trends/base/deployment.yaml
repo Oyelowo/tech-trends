@@ -38,5 +38,15 @@ spec:
           limits:
             cpu: 100m
             memory: 512Mi
-
-
+        livenessProbe:
+          httpGet:
+            path: /status/healthcheck
+            port: 3111
+          initialDelaySeconds: 90
+          timeoutSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /status/healthcheck
+            port: 3111
+          initialDelaySeconds: 30
+          timeoutSeconds: 10
