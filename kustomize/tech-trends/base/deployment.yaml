@@ -24,7 +24,7 @@ spec:
         app: tech-trends
     spec:
       containers:
-      - image: oyelowo/tech-trends:latest
+      - image: oyelowo/tech-trends
         name: tech-trends
         ports:
          - name: http
