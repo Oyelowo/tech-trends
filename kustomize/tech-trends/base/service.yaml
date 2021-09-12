@@ -7,11 +7,18 @@ metadata:
     app: tech-trends
     tag: web
 spec:
-  selector:
-    app: tech-trends-web
   ports:
-  - protocol: TCP
+  - name: http
     port: 80
+    protocol: TCP
     targetPort: 3111
-    nodePort: 30009
+    nodePort: 30020
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 3111
+    nodePort: 30021
+  selector:
+    name: tech-trends-web
+  sessionAffinity: None
   type: NodePort
