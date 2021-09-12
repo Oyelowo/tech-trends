@@ -19,6 +19,6 @@ spec:
     targetPort: 3111
     nodePort: 30021
   selector:
-    name: tech-trends
+    app: tech-trends
   sessionAffinity: None
   type: NodePort
