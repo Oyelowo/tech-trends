@@ -7,5 +7,5 @@ resources:
 patchesStrategicMerge:
   - deployment.yaml
 
-nameSuffix: -production
-namespace: production
+nameSuffix: -prod
+namespace: prod

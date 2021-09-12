@@ -1,6 +1,6 @@
 resources:
-- ./sandbox
-- ./staging
-- ./production
+- ./environments/dev
+- ./environments/staging
+- ./environments/prod
 
 nameSuffix: -cluster-a
