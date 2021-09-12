@@ -36,10 +36,13 @@ def healthcheck():
 # Define the main route of the web application 
 @app.route('/')
 def index():
-    connection = get_db_connection()
-    posts = connection.execute('SELECT * FROM posts').fetchall()
-    connection.close()
-    return render_template('index.html', posts=posts)
+    response = app.response_class(
+        response=json.dumps({"status":"TestingOK-healthy"}),
+        status=200,
+        mimetype='application/json'
+    )
+    
+    return response
 
 # Define how each individual article is rendered 
 # If the post ID is not found a 404 page is shown
