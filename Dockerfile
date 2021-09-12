@@ -17,4 +17,6 @@ RUN python init_db.py
 
 EXPOSE 3111
 
+ENTRYPOINT ["bash","entrypoint.prod.sh"]
+
 CMD [ "python", "./app.py" ]
