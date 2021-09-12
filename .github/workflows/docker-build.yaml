@@ -68,7 +68,7 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
        cd kustomize/tech-trends/base
-       kustomize edit set image tech=${{env.IMAGE_WITH_TAG}}
+       kustomize edit set image oyelowo/tech-trends=${{env.IMAGE_WITH_TAG}}
        cat kustomization.yaml
         
     - name: Commit files
