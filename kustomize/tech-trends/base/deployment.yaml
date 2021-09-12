@@ -52,7 +52,7 @@ spec:
           timeoutSeconds: 10
         volumeMounts:
         - name: web-volume
-          mountPath: /app
+          mountPath: .
       volumes:
       - name: web-volume
         hostPath:
