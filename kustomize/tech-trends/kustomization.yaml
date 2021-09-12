@@ -2,4 +2,5 @@ resources:
 - ./sandbox
 - ./staging
 - ./production
-namePrefix: cluster-a-
+
+nameSuffix: -cluster-a

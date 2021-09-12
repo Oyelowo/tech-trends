@@ -4,16 +4,14 @@ metadata:
 # Labels for the deployment itself.
   labels:
     app: tech-trends
-    tag: web
   name: tech-trends-web
-  namespace: test
+  namespace: default
 spec:
   replicas: 1 
   selector:
   # This connects the deployment to the replicaset/pods
     matchLabels:
       app: tech-trends
-      tag: web
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -24,11 +22,14 @@ spec:
     metadata:
       labels:
         app: tech-trends
-        tag: web
     spec:
       containers:
       - image: oyelowo/tech-trends:latest
         name: tech-trends
+        ports:
+         - name: http
+           containerPort: 3111
+           protocol: TCP
         imagePullPolicy: IfNotPresent
         resources:
           requests:

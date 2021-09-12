@@ -12,6 +12,7 @@ spec:
     tag: web
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 5000
-  type: LoadBalancer
+    port: 80
+    targetPort: 3111
+    nodePort: 5000
+  type: NodePort

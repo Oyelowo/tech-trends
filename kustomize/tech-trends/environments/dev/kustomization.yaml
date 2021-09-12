@@ -1,0 +1,55 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+
+# Alternative but this has already been defined in resources.yaml. Keeping for reference.
+# patchesStrategicMerge:
+#   - resources.yaml
+
+nameSuffix: -dev
+namespace: dev
+
+replicas:
+  - name: tech-trends-web
+    count: 3
+
+
+
+# Use patches/patchesStrategicMerge for more complex config
+# patches:
+#   - patch: |-
+#       apiVersion: apps/v1
+#       kind: Deployment
+#       metadata:
+#         name: tech-trends-web
+#       spec:
+#         replicas: 5
+#         template:
+#           spec:
+#             containers:
+#               resources:
+#                 limits:
+#                   cpu: 2
+#                   memory: 25Gi
+#                 requests:
+#                   cpu: 2
+#                   memory: 25Gi
+  # - patch: |-
+  #     apiVersion: apps/v1
+  #     kind: Deployment
+  #     metadata:
+  #       name: tech-trends-web
+  #     spec:
+    #    replicas: 5
+
+#   - patch: |-
+#       apiVersion: apps/v1
+#       kind: Deployment
+#       metadata:
+#         name: tech-trends-web
+#       spec:
+#         replicas: 5
+    

@@ -9,6 +9,6 @@ WORKDIR /app
 
 COPY ./src .
 
-# EXPOSE 5111
+EXPOSE 3111
 
 CMD [ "python", "./app.py" ]
