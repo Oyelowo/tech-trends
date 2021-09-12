@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 80
+    port: 3111
     protocol: TCP
     targetPort: 3111
     nodePort: 30040
