@@ -2,17 +2,15 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: tech-trends-pv-volume
+  labels:
+    type: local
 spec:
   capacity:
     storage: 2Gi
-  volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: slow
-  mountOptions:
-    - hard
-    - nfsvers=4.1
+  storageClassName: manual
   hostPath:
     path: "/mnt/data"
 

@@ -5,6 +5,9 @@ resources:
 - deployment.yaml
 - namespace.yaml
 - service.yaml
+- persistent-volume.yaml
+- persistent-volume-claim.yaml
+
 images:
 - name: oyelowo/tech-trends
   newName: oyelowo/tech-trends
