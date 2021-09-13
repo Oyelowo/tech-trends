@@ -9,6 +9,10 @@ spec:
       storage: 1Gi
   accessModes:
     - ReadWriteOnce
+  selector:
+    matchLabels:
+      type: local
+
     #finalizers:
   #- kubernetes.io/pv-protection
 
