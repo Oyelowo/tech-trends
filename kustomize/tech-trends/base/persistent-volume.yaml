@@ -5,21 +5,13 @@ metadata:
   labels:
     type: local
 spec:
-  volumeMode: Filesystem
+  volumeMode: File
   capacity:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
-  local:
-    path: "/mnt/data"
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-        - matchExpressions:
-          - key: kubernetes.io/hostname
-            operator: In
-            values:
-            - localhost
+  hostPath:
+    path: "/mnt/data/dev"
 
