@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: tech-trends-pvc-volume
 spec:
-  storageClassName: manual
+  storageClassName: slow
   resources:
     requests:
       storage: 1Gi
