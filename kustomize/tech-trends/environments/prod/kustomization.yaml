@@ -4,9 +4,11 @@ kind: Kustomization
 resources:
 - ../../base
 
+nameSuffix: -prod
+namespace: prod
+
 patchesStrategicMerge:
   - deployment.yaml
   - service.yaml
+  - persistent-volume.yaml
 
-nameSuffix: -prod
-namespace: prod

@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tech-trends-web
-  namespace: prod
 spec:
   replicas: 4
   template:

@@ -7,6 +7,7 @@ resources:
 patchesStrategicMerge:
   - deployment.yaml
   - service.yaml
+  - persistent-volume.yaml
   
 nameSuffix: -staging
 namespace: staging
