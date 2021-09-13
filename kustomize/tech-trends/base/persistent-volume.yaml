@@ -10,7 +10,7 @@ spec:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Delete
+  persistentVolumeReclaimPolicy: retain
   storageClassName: local-storage
   local:
     path: "/mnt/data"

@@ -16,10 +16,3 @@ spec:
           limits:
             cpu: 2
             memory: "1G"
-        volumeMounts:
-        - name: web-volume-staging
-          mountPath: .
-      volumes:
-      - name: web-volume-staging
-        hostPath:
-          path: /tech-trends-staging/data 
