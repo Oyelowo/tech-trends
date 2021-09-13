@@ -11,4 +11,4 @@ resources:
 images:
 - name: oyelowo/tech-trends
   newName: oyelowo/tech-trends
-  newTag: main-2378dc884a9d91c4dd0a25b2ab166dddfaab952f
+  newTag: main-077a4a9620533052dbad93f7cf0c8c3d7eb96e18
