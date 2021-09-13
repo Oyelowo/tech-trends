@@ -53,8 +53,8 @@ spec:
           timeoutSeconds: 10
         volumeMounts:
         - name: web-volume-dev
-          mountPath: .
+          mountPath: /data
       volumes:
       - name: web-volume-dev
-        hostPath:
-          path: /tech-trends-dev/data 
+        persistentVolumeClaim:
+          claimName: tech-trends-pvc-volume 
