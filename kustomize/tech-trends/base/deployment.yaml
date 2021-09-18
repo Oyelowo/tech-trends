@@ -52,9 +52,9 @@ spec:
           initialDelaySeconds: 30
           timeoutSeconds: 10
         volumeMounts:
-        - name: web-volume-dev
-          mountPath: ./database.db
+        - mountPath: ./database.db
+          name: sqlitedb
       volumes:
-      - name: web-volume-dev
+      - name: sqlitedb
         persistentVolumeClaim:
-          claimName: tech-trends-pvc-volume 
+          claimName: sqlite-pv-claim 

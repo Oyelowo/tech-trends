@@ -1,17 +1,19 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: tech-trends-pvc-volume
+  name: sqlite-pv-claim
+  labels:
+    app: sqlite
 spec:
-  storageClassName: local-storage
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
   resources:
     requests:
-      storage: 1Gi
-  accessModes:
-    - ReadWriteOnce
-  selector:
-    matchLabels:
-      type: local
+      storage: 256Mi
+  # selector:
+  #   matchLabels:
+  #     type: local
 
     #finalizers:
   #- kubernetes.io/pv-protection
