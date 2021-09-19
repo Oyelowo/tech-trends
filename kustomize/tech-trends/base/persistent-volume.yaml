@@ -14,5 +14,5 @@ spec:
   storageClassName: manual
   hostPath:
     path: "/mnt/data/dev"
-    # type: FileOrCreate
+    type: FileOrCreate
 
