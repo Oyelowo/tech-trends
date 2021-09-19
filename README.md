@@ -79,3 +79,15 @@ You can also launch deploy them separately for different environments
 of simply by apply the argocd-kustomize folder:
 `kubectl apply -f argocd-kustomize/`
 
+
+
+
+
+### Note for me 
+sh into pod in namespace dev
+`kubectl exec --stdin --tty <pod-name> -n dev -- /bin/bash`
+
+`kubectl exec --stdin --tty tech-trends-web-dev-5d5b9cc7f-ndmsd -n dev -- /bin/bash`
+`kubectl exec --stdin --tty tech-trends-web-dev-5d5b9cc7f-gpdwv -n dev -- /bin/bash`
+
+kubectl get po -n dev

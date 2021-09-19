@@ -43,18 +43,17 @@ spec:
           httpGet:
             path: /status/healthcheck
             port: 3111
-          initialDelaySeconds: 90
+          initialDelaySeconds: 15
           timeoutSeconds: 10
         readinessProbe:
           httpGet:
             path: /status/healthcheck
             port: 3111
-          initialDelaySeconds: 30
+          initialDelaySeconds: 10
           timeoutSeconds: 10
         volumeMounts:
         - mountPath: /app/database.db
           name: sqlitedb
-          # subPath: database.db
       volumes:
       - name: sqlitedb
         persistentVolumeClaim:
