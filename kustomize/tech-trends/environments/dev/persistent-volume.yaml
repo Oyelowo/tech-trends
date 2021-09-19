@@ -4,4 +4,4 @@ metadata:
   name: sqlite-pv-claim
 spec:
   local:
-    path: "/mnt/data/dev"
+    path: "/mnt/data/dev/database.db"
