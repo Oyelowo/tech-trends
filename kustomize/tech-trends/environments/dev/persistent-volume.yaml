@@ -4,4 +4,4 @@ metadata:
   name: sqlite-pv-claim
 spec:
   hostPath:
-    path: "/mnt/data/dev/database.db"
+    path: "/mnt/data/dev"

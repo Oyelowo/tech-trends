@@ -13,6 +13,6 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: manual
   hostPath:
-    path: "/mnt/data/dev/database.db"
-    type: FileOrCreate
+    path: "/mnt/data/dev"
+    # type: FileOrCreate
 
