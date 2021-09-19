@@ -32,6 +32,10 @@ Go to vagrant home where you can see the copied files
 `cd /home/vagrant`
 
 ## On local machine
+If ssh key is already generated for local machine and you want to create a new one:
+`vi ~/.ssh/known_hosts`
+
+Delete the old ssh key
 
 Copy all argocd files from local machine to the virtual machine
 
