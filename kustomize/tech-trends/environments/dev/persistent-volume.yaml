@@ -3,5 +3,5 @@ kind: PersistentVolume
 metadata:
   name: sqlite-pv-claim
 spec:
-  local:
+  hostPath:
     path: "/mnt/data/dev/database.db"
