@@ -9,9 +9,9 @@ COPY ./src .
 
 RUN pip install -r requirements.txt
 
-RUN chmod +x init_db.py
+# RUN chmod +x init_db.py
 
-RUN python init_db.py
+# RUN python init_db.py
 
 
 

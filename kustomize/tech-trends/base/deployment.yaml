@@ -51,6 +51,15 @@ spec:
             port: 3111
           initialDelaySeconds: 10
           timeoutSeconds: 10
+        lifecycle:
+          postStart:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - |
+              chmod +x init_db.py
+              python init_db.py
         volumeMounts:
         - mountPath: /app/database.db
           name: sqlitedb
