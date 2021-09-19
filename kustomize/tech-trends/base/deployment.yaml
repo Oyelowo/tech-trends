@@ -54,6 +54,7 @@ spec:
         volumeMounts:
         - mountPath: /app/database.db
           name: sqlitedb
+          subPath: database.dv
       volumes:
       - name: sqlitedb
         persistentVolumeClaim:
