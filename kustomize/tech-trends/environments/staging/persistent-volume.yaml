@@ -3,5 +3,6 @@ kind: PersistentVolume
 metadata:
   name: sqlite-pv
 spec:
-  local:
+  hostPath:
     path: "/mnt/data/staging/database.db"
+    type: FileOrCreate

@@ -7,3 +7,4 @@ spec:
    # Here we are using a local virtual machine which is a single node.
   hostPath:
     path: "/mnt/data/prod/database.db"
+    type: FileOrCreate
