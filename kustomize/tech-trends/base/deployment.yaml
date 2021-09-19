@@ -54,12 +54,7 @@ spec:
         lifecycle:
           postStart:
             exec:
-              command:
-              - /bin/sh
-              - -c
-              - |
-              chmod +x init_db.py
-              python init_db.py
+              command: ["python", "init_db.py"]
         volumeMounts:
         - mountPath: /app/database.db
           name: sqlitedb
